@@ -1,12 +1,26 @@
-The Tic-Tac-Toe game is a classic two-player strategy game where players take turns marking 'X' or 'O' in a 3×3 grid. The objective is to get three marks in a row—horizontally, vertically, or diagonally—before the opponent does. If all nine cells are filled and no player achieves this, the game results in a draw.
+This project is a user authentication system built using PHP, MySQL, HTML, and CSS. It allows users to register, log in, and log out while securely storing their credentials in a MySQL database. The project ensures password encryption and session management, making it a functional and secure system.
 
-This project is built using PHP for backend processing, along with HTML, CSS, and JavaScript for the frontend to provide an interactive and engaging user experience.
+Key Features:
+✅ User Registration:
+Users can create an account by providing a username, email, and password.
+Passwords are encrypted using password hashing (PASSWORD_DEFAULT).
+Data is securely stored in a MySQL database.
 
-Project Features:
-✅ User-Friendly Interface: The game board is designed with a simple and modern UI using CSS.
-✅ Turn-Based Gameplay: Players take turns, and the system automatically switches between 'X' and 'O'.
-✅ Win Detection: The game checks for a winner after every move based on predefined winning conditions.
-✅ Draw Detection: If all cells are filled without a winner, the game declares a draw.
-✅ Session Management: The game state is maintained using PHP sessions, allowing smooth gameplay without refreshing.
-✅ Restart Option: A "Play Again" button resets the board to start a new game.
-✅ Responsive Design: The game works well on different screen sizes, including mobile devices.
+✅ User Login:
+Users can log in with a username and password.
+The system verifies credentials by checking hashed passwords against stored values.
+Successful login redirects users to a welcome page.
+If credentials are incorrect, appropriate error messages are displayed.
+
+✅ Session Management:
+Sessions are used to track logged-in users.
+Upon login, the session stores the username to maintain an active session.
+A logout script (session_destroy()) ensures users can securely log out and end their session.
+
+✅ Database Connection (db_connect.php):
+Establishes a connection to a MySQL database using mysqli.
+Ensures the connection is active and handles errors gracefully.
+
+✅ Security Features:
+Password Hashing: Uses password_hash() and password_verify() for secure password management.
+Session Handling: Prevents unauthorized access using session validatio
